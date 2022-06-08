@@ -1,0 +1,26 @@
+{
+  "latvia": {
+    "lv": [
+      {
+        "name": "Pilsēta cilvēkiem",
+        "description": "Apvienība \"Pilsēta cilvēkiem\" radusies 2016. gada janvārī ar mērķi veicināt labas pilsētvides ieviešanu Rīgā un citās Latvijas pilsētās. Mēs esam par drošu, ātru un ērtu nokļūšanu no punkta A uz punktu B, neatkarīgi no tā, ar kādu transporta līdzekli pārvietojies - ej kājām, brauc ar velosipēdu, sabiedriskajā transportā vai automašīnā. Pagājušā gadsimta 60. gados un līdz šim ielas Latvijas pilsētās veidotas maksimāli ērtas autotransportam, aizmirstot par gājējiem un velosipēdistiem, kā arī sabiedrisko transportu. Rezultātā arvien vairāk un vairāk cilvēku izvēlas pat salīdzinoši īsas distances veikt ar privāto autotransportu. Tādēļ katru darbadienas rītu un pievakari tūkstošiem rīdzinieku pavada milzīgos sastrēgumos.",
+        "website": "https://www.pilsetacilvekiem.lv/"
+      },
+      {
+        "name": "Zero Waste Latvija",
+        "website": "https://www.zerowastelatvija.lv/"
+      }
+    ],
+    "en": [
+      {
+        "name": "\"Pilsēta cilvēkiem\" (City for People)",
+        "description": "The organisation \"Pilsēta cilvēkiem\" (City for People) was established in January 2016 to advocate for better city planning in Riga and other Latvian cities. Our mission is to promote safe, comfortable, and fast travel whether you walk, cycle, drive, or use public transportation. Since the 1960s, streets in Latvian cities have been designed with cars in mind, with little consideration given to other options. As a result, more and more people are choosing to travel even relatively short distances by car. Because of this, thousands of Rigans have to endure huge traffic jams during rush hour.",
+        "website": "https://en.pilsetacilvekiem.lv/"
+      },
+      {
+        "name": "\"Zero Waste Latvija\" (Zero Waste Latvia)",
+        "website": "https://www.zerowastelatvija.lv/"
+      }
+    ]
+  }
+}

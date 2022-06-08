@@ -1,0 +1,37 @@
+---
+import i18next, { t } from "i18next";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import data from "./_nonprofit-organizations.json";
+
+export async function getStaticPaths() {
+    return i18next.languages.map((lang) => {
+        return Object.keys(data).map((location) => ({
+            params: { lang, location },
+            props: { nonprofitOrganizations: data[location][lang] },
+        }));
+    });
+};
+
+const { lang, location } = Astro.params;
+const { nonprofitOrganizations } = Astro.props;
+
+const locationPascalCase = (location as string).charAt(0).toUpperCase() + (location as string).slice(1);
+
+i18next.changeLanguage(lang as string);
+---
+
+<BaseLayout language={i18next.language}>
+    <main class="container">
+        <h1>{t("global.nonprofitOrganizations")} {t(`global.in${locationPascalCase}`)}</h1>
+        {nonprofitOrganizations.map((item) => (
+        <article>
+            <h2>
+                <a href={item.website} target="_blank" rel="noopener noreferrer">
+                    {item.name}
+                </a>
+            </h2>
+            <p>{item.description}</p>
+        </article>
+        ))}
+    </main>
+</BaseLayout>

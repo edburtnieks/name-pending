@@ -1,0 +1,28 @@
+---
+import i18next, { t } from "i18next";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import locations from "../_locations.json";
+
+export async function getStaticPaths() {
+    return i18next.languages.map((lang) => {
+        return locations.map((location) => ({
+            params: { lang, location },
+        }));
+    });
+};
+
+const { lang, location } = Astro.params;
+
+i18next.changeLanguage(lang as string);
+---
+
+<BaseLayout language={i18next.language}>
+    <main class="container">
+        <h1>{t(`global.${location}`) }</h1>
+        <menu>
+            <a href={`/${lang}/locations/${location}/nonprofit-organizations`}>
+                {t("global.nonprofitOrganizations")}
+            </a>
+        </menu>
+    </main>
+</BaseLayout>

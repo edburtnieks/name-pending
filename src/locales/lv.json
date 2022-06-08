@@ -1,0 +1,10 @@
+{
+  "global": {
+    "home": "Sākums",
+    "locations": "Vietas",
+    "latvia": "Latvija",
+    "inLatvia": "Latvijā",
+    "inLocation": "{{inLocation}}",
+    "nonprofitOrganizations": "Bezpeļņas organizācijas"
+  }
+}

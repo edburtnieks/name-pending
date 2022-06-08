@@ -1,0 +1,10 @@
+{
+  "global": {
+    "home": "Home",
+    "locations": "Locations",
+    "latvia": "Latvia",
+    "inLatvia": "in Latvia",
+    "inLocation": "{{inLocation}}",
+    "nonprofitOrganizations": "Nonprofit organizations"
+  }
+}
