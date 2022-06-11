@@ -27,13 +27,17 @@ const { language } = Astro.props as Props;
     <header class="container">
         <nav>
             <menu class="flow">
-                <a href={`/${language}`}><span>{t("global.home")}</span></a>
-                <a href={`/${language}/locations`}><span>{t("global.locations")}</span></a>
+                <a href={`/${language}`} data-state={`/${language}` === `/${language}${url}` ? "active" : undefined}>
+                    <span>{t("global.home")}</span>
+                </a>
+                <a href={`/${language}/locations`} data-state={`/${language}/locations` === `/${language}${url}` ? "active" : undefined}>
+                    <span>{t("global.locations")}</span>
+                </a>
             </menu>
         </nav>
         <menu class="flow">
             {[...i18next.languages].sort().map((language) => (
-            <a href={`/${language}${url}`} data-state={i18next.language===language ? "active" : undefined}>
+            <a href={`/${language}${url}`} data-state={i18next.language === language ? "active" : undefined}>
                 <span>{LANGUAGE_MAP[language]}</span>
             </a>
             ))}
