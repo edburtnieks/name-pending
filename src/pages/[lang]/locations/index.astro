@@ -19,9 +19,11 @@ i18next.changeLanguage(lang as string);
         <h1>{t("global.locations")}</h1>
         <menu>
             {locations.map((location) => (
-            <a href={`/${lang}/locations/${location}`}>
-                {t(`global.${location}`)}
-            </a>
+            <li>
+                <a href={`/${lang}/locations/${location}`}>
+                    {t(`global.${location}`)}
+                </a>    
+            </li>
             ))}
         </menu>
     </main>

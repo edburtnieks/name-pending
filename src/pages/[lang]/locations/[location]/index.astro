@@ -20,9 +20,16 @@ i18next.changeLanguage(lang as string);
     <main class="container">
         <h1>{t(`global.${location}`) }</h1>
         <menu>
-            <a href={`/${lang}/locations/${location}/nonprofit-organizations`}>
-                {t("global.nonprofitOrganizations")}
-            </a>
+            <li>
+                <a href={`/${lang}/locations/${location}/nonprofit-organizations`}>
+                    {t("global.nonprofitOrganizations")}
+                </a>
+            </li>
+            <li>
+                <a href={`/${lang}/locations/${location}/recycling-and-waste-management`}>
+                    {t("global.recyclingAndWasteManagement")}
+                </a>
+            </li>
         </menu>
     </main>
 </BaseLayout>

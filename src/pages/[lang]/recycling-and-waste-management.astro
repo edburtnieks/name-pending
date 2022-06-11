@@ -1,28 +1,28 @@
 ---
 import i18next, { t } from "i18next";
 import BaseLayout from "@layouts/BaseLayout.astro";
-import data from "./locations/[location]/_nonprofit-organizations.json";
+import data from "./locations/[location]/_recycling_and_waste_management.json";
 
 export async function getStaticPaths() {
     return i18next.languages.map((lang) => ({
         params: { lang },
-        props: { nonprofitOrganizations: data },
+        props: { recyclingAndWasteManagementData: data },
     }));
 };
 
 const { lang } = Astro.params;
-const { nonprofitOrganizations } = Astro.props;
+const { recyclingAndWasteManagementData } = Astro.props;
 
 i18next.changeLanguage(lang as string);
 ---
 
 <BaseLayout language={i18next.language}>
     <main class="container">
-        <h1>{t("global.nonprofitOrganizations")}</h1>
-        {Object.entries(nonprofitOrganizations).map((item) => (
+        <h1>{t("global.recyclingAndWasteManagement")}</h1>
+        {Object.entries(recyclingAndWasteManagementData).map((item) => (
         <article>
             <h2>
-                <a href={`/${lang}/locations/${item[0]}/nonprofit-organizations`}>
+                <a href={`/${lang}/locations/${item[0]}/recycling-and-waste-management`}>
                     {t(`global.${item[0]}`)}
                 </a>
             </h2>
