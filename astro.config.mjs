@@ -1,18 +1,22 @@
 import { defineConfig } from "astro/config";
 import astroI18next from "astro-i18next";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
-    experimental: {
-        integrations: true,
-    },
-    integrations: [
-        astroI18next({
-            resourcesPath: "./src/locales/",
-            i18next: {
-                fallbackLng: "en",
-                supportedLngs: ["en", "lv"],
-            },
-        }),
-    ],
+  site: "https://name-pending.netlify.app",
+  experimental: {
+    integrations: true
+  },
+  integrations: [
+    sitemap(),
+    astroI18next({
+      resourcesPath: "./src/locales/",
+      i18next: {
+        fallbackLng: "en",
+        supportedLngs: ["en", "lv"]
+      }
+    }),
+  ],
 });
