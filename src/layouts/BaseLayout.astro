@@ -1,6 +1,7 @@
 ---
 import i18next, { t } from "i18next";
 import { LANGUAGE_MAP } from "@constants/languages";
+import { localizePath } from "@utils/localize-path";
 
 export interface Props {
     language?: string;
@@ -27,10 +28,10 @@ const { language } = Astro.props as Props;
     <header class="container">
         <nav>
             <menu class="flow">
-                <a href={`/${language}`} data-state={`/${language}` === `/${language}${url}` ? "active" : undefined}>
+                <a href={localizePath("/")} data-state={localizePath("/") === `/${language}${url}` ? "active" : undefined}>
                     <span>{t("global.home")}</span>
                 </a>
-                <a href={`/${language}/locations`} data-state={`/${language}/locations` === `/${language}${url}` ? "active" : undefined}>
+                <a href={localizePath("/locations")} data-state={localizePath("/locations") === `/${language}${url}` ? "active" : undefined}>
                     <span>{t("global.locations")}</span>
                 </a>
             </menu>

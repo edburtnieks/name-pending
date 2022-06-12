@@ -9,8 +9,8 @@ export default defineConfig({
     integrations: [
         astroI18next({
             resourcesPath: "./src/locales/",
-            i18nextConfig: {
-                fallbackLng: ["en", "lv"],
+            i18next: {
+                fallbackLng: "en",
                 supportedLngs: ["en", "lv"],
             },
         }),

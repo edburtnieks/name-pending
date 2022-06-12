@@ -1,6 +1,7 @@
 ---
 import i18next, { t } from "i18next";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { localizePath } from "@utils/localize-path";
 import locations from "../_locations.json";
 
 export async function getStaticPaths() {
@@ -21,12 +22,12 @@ i18next.changeLanguage(lang as string);
         <h1>{t(`global.${location}`) }</h1>
         <menu>
             <li>
-                <a href={`/${lang}/locations/${location}/nonprofit-organizations`}>
+                <a href={localizePath(`/locations/${location}/nonprofit-organizations`)}>
                     {t("global.nonprofitOrganizations")}
                 </a>
             </li>
             <li>
-                <a href={`/${lang}/locations/${location}/recycling-and-waste-management`}>
+                <a href={localizePath(`/locations/${location}/recycling-and-waste-management`)}>
                     {t("global.recyclingAndWasteManagement")}
                 </a>
             </li>
