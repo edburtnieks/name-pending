@@ -2,6 +2,7 @@
   "global": {
     "home": "Home",
     "locations": "Locations",
+    "categories": "Categories",
     "latvia": "Latvia",
     "inLatvia": "in Latvia",
     "inLocation": "{{inLocation}}",

@@ -2,7 +2,7 @@
 import i18next, { t } from "i18next";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { localizePath } from "@utils/localize-path";
-import data from "./locations/[location]/_farmers-and-crafts-markets.json";
+import data from "./locations/[location]/_data/_farmers-and-crafts-markets.json";
 
 export async function getStaticPaths() {
     return i18next.languages.map((lang) => ({

@@ -1,6 +1,8 @@
 ---
-import i18next from "i18next";
+import i18next, { t } from "i18next";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { localizePath } from "@utils/localize-path";
+import { data } from "./[lang]/locations/[location]/_data/_data";
 
 export async function getStaticPaths() {
 	return i18next.languages.map((lang) => ({
@@ -14,5 +16,14 @@ i18next.changeLanguage(lang as string);
 ---
 
 <BaseLayout language={i18next.language}>
-
+	<main class="container">
+		<h1>{t("global.categories")}</h1>
+		<menu>
+			{Object.values(data).map((datum) => (
+			<li>
+				<a href={localizePath(datum.link)}>{t(`global.${datum.titleTranslationKey}`)}</a>
+			</li>
+			))}
+		</menu>
+	</main>
 </BaseLayout>

@@ -7,10 +7,8 @@ export interface Props {
     language?: string;
 };
 
-const pathnameParts = new URL(Astro.request.url).pathname.split("/");
-pathnameParts.splice(0, 2);
-const url = pathnameParts.length ? `/${pathnameParts.join("/")}` : "";
-
+const { languages: supportedLanguages, language: currentLanguage } = i18next;
+const { pathname } = Astro.canonicalURL;
 const { language } = Astro.props as Props;
 ---
 
@@ -28,18 +26,24 @@ const { language } = Astro.props as Props;
     <header class="container">
         <nav>
             <menu class="flow">
-                <a href={localizePath("/")} data-state={localizePath("/") === `/${language}${url}` ? "active" : undefined}>
+                <a
+                    href={localizePath("/")}
+                    data-state={localizePath("/")===localizePath(pathname) ? "active" : undefined}>
                     <span>{t("global.home")}</span>
                 </a>
-                <a href={localizePath("/locations")} data-state={localizePath("/locations") === `/${language}${url}` ? "active" : undefined}>
+                <a
+                    href={localizePath("/locations")}
+                    data-state={localizePath("/locations")===localizePath(pathname) ? "active" : undefined}>
                     <span>{t("global.locations")}</span>
                 </a>
             </menu>
         </nav>
         <menu class="flow">
-            {[...i18next.languages].sort().map((language) => (
-            <a href={`/${language}${url}`} data-state={i18next.language === language ? "active" : undefined}>
-                <span>{LANGUAGE_MAP[language]}</span>
+            {[...supportedLanguages].sort().map((supportedLanguage) => (
+            <a
+                href={localizePath(pathname, supportedLanguage)}
+                data-state={supportedLanguage===currentLanguage ? "active" : undefined}>
+                <span>{LANGUAGE_MAP[supportedLanguage]}</span>
             </a>
             ))}
         </menu>
