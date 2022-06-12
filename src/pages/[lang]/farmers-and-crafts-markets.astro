@@ -2,28 +2,28 @@
 import i18next, { t } from "i18next";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { localizePath } from "@utils/localize-path";
-import data from "./locations/[location]/_recycling-and-waste-management.json";
+import data from "./locations/[location]/_farmers-and-crafts-markets.json";
 
 export async function getStaticPaths() {
     return i18next.languages.map((lang) => ({
         params: { lang },
-        props: { recyclingAndWasteManagementData: data },
+        props: { farmersAndCraftsMarkets: data },
     }));
 };
 
 const { lang } = Astro.params;
-const { recyclingAndWasteManagementData } = Astro.props;
+const { farmersAndCraftsMarkets } = Astro.props;
 
 i18next.changeLanguage(lang as string);
 ---
 
 <BaseLayout language={i18next.language}>
     <main class="container">
-        <h1>{t("global.recyclingAndWasteManagement")}</h1>
-        {Object.entries(recyclingAndWasteManagementData).map((item) => (
+        <h1>{t("global.farmersAndCraftsMarkets")}</h1>
+        {Object.entries(farmersAndCraftsMarkets).map((item) => (
         <article>
             <h2>
-                <a href={localizePath(`/locations/${item[0]}/recycling-and-waste-management`)}>
+                <a href={localizePath(`/locations/${item[0]}/farmer-markets`)}>
                     {t(`global.${item[0]}`)}
                 </a>
             </h2>

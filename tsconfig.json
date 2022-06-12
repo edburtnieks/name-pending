@@ -11,6 +11,7 @@
     "isolatedModules": true,
     // Add type definitions for our Vite runtime.
     "types": ["vite/client"],
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "@layouts/*": ["src/layouts/*"],

@@ -1,0 +1,24 @@
+{
+  "latvia": {
+    "lv": [
+      {
+        "name": "Āgenskalna Tirgus",
+        "website": "https://agenskalnatirgus.lv"
+      },
+      {
+        "name": "Kalnciema Kvartāla Tirgus",
+        "website": "http://www.kalnciemaiela.lv/lv/tirgus"
+      }
+    ],
+    "en": [
+      {
+        "name": "Agenskalns Market (LV)",
+        "website": "https://agenskalnatirgus.lv"
+      },
+      {
+        "name": "Kalnciema Quarter Market",
+        "website": "http://www.kalnciemaiela.lv/en/market"
+      }
+    ]
+  }
+}
