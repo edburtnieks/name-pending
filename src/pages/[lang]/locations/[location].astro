@@ -15,17 +15,20 @@ export async function getStaticPaths() {
 
 const { lang, location } = Astro.params;
 
+const categories = Object.values(data);
+const locationCategories = categories.filter(category => Object.hasOwn(category, location));
+
 i18next.changeLanguage(lang as string);
 ---
 
 <BaseLayout language={i18next.language}>
     <main class="container">
-        <h1>{t(`global.${location}`) }</h1>
+        <h1>{t(`location.country.${location}`) }</h1>
         <menu>
-            {Object.values(data).map((datum) => (
+            {locationCategories.map((category) => (
             <li>
-                <a href={localizePath(`/locations/${location}${datum.link}`)}>
-                    {t(`global.${datum.titleTranslationKey}`)}
+                <a href={localizePath(`/locations/${location}${category.link}`)}>
+                    {t(`global.${category.titleTranslationKey}`)}
                 </a>
             </li>
             ))}

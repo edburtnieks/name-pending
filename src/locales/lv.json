@@ -1,13 +1,20 @@
 {
   "global": {
     "home": "Sākums",
-    "locations": "Vietas",
     "categories": "Kategorijas",
-    "latvia": "Latvija",
-    "inLatvia": "Latvijā",
-    "inLocation": "{{inLocation}}",
     "nonprofitOrganizations": "Bezpeļņas Organizācijas",
     "recyclingAndWasteManagement": "Pārstrāde un Atkritumu Apsaimniekošana",
-    "farmersAndCraftsMarkets": "Zemnieku un Amatnieku Tirgi"
+    "farmersAndCraftsMarkets": "Zemnieku un Amatnieku Tirgi",
+    "strategicInnovationProgrammes": "Stratēģiskās Inovācijas Programmas"
+  },
+  "location": {
+    "locations": "Vietas",
+    "inLocation": "{{inLocation}}",
+    "country": {
+      "latvia": "Latvija",
+      "inLatvia": "Latvijā",
+      "sweden": "Zviedrija",
+      "inSweden": "Zviedrijā"
+    }
   }
 }

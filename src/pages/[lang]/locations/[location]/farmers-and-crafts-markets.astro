@@ -22,7 +22,7 @@ i18next.changeLanguage(lang as string);
 
 <BaseLayout language={i18next.language}>
     <main class="container">
-        <h1>{t("global.farmersAndCraftsMarkets")} {t(`global.in${locationPascalCase}`)}</h1>
+        <h1>{t("global.farmersAndCraftsMarkets")} {t(`location.country.in${locationPascalCase}`)}</h1>
         {farmersAndCraftsMarkets.map((item) => (
         <article>
             <h2>

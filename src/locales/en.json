@@ -1,13 +1,20 @@
 {
   "global": {
     "home": "Home",
-    "locations": "Locations",
     "categories": "Categories",
-    "latvia": "Latvia",
-    "inLatvia": "in Latvia",
-    "inLocation": "{{inLocation}}",
     "nonprofitOrganizations": "Nonprofit Organizations",
     "recyclingAndWasteManagement": "Recycling and Waste Management",
-    "farmersAndCraftsMarkets": "Farmers and Crafts Markets"
+    "farmersAndCraftsMarkets": "Farmers and Crafts Markets",
+    "strategicInnovationProgrammes": "Strategic Innovation Programmes"
+  },
+  "location": {
+    "locations": "Locations",
+    "inLocation": "{{inLocation}}",
+    "country": {
+      "latvia": "Latvia",
+      "inLatvia": "in Latvia",
+      "sweden": "Sweden",
+      "inSweden": "in Sweden"
+    }
   }
 }

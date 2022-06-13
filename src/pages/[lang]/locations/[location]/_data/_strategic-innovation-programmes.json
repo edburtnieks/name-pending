@@ -1,0 +1,16 @@
+{
+  "sweden": {
+    "lv": [
+      {
+        "name": "Viable Cities (EN)",
+        "website": "https://en.viablecities.se/"
+      }
+    ],
+    "en": [
+      {
+        "name": "Viable Cities",
+        "website": "https://en.viablecities.se/"
+      }
+    ]
+  }
+}

@@ -17,12 +17,12 @@ i18next.changeLanguage(lang as string);
 
 <BaseLayout language={i18next.language}>
     <main class="container">
-        <h1>{t("global.locations")}</h1>
+        <h1>{t("location.locations")}</h1>
         <menu>
             {locations.map((location) => (
             <li>
                 <a href={localizePath(`/locations/${location}`)}>
-                    {t(`global.${location}`)}
+                    {t(`location.country.${location}`)}
                 </a>
             </li>
             ))}

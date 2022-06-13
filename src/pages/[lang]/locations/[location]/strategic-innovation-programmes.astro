@@ -1,19 +1,19 @@
 ---
 import i18next, { t } from "i18next";
 import BaseLayout from "@layouts/BaseLayout.astro";
-import data from "./_data/_recycling-and-waste-management.json";
+import data from "./_data/_strategic-innovation-programmes.json";
 
 export async function getStaticPaths() {
     return i18next.languages.map((lang) => {
         return Object.keys(data).map((location) => ({
             params: { lang, location },
-            props: { recyclingAndWasteManagementData: data[location][lang] },
+            props: { strategicInnovationProgrammes: data[location][lang] },
         }));
     });
 };
 
 const { lang, location } = Astro.params;
-const { recyclingAndWasteManagementData } = Astro.props;
+const { strategicInnovationProgrammes } = Astro.props;
 
 const locationPascalCase = (location as string).charAt(0).toUpperCase() + (location as string).slice(1);
 
@@ -22,8 +22,8 @@ i18next.changeLanguage(lang as string);
 
 <BaseLayout language={i18next.language}>
     <main class="container">
-        <h1>{t("global.recyclingAndWasteManagement")} {t(`location.country.in${locationPascalCase}`)}</h1>
-        {recyclingAndWasteManagementData.map((item) => (
+        <h1>{t("global.strategicInnovationProgrammes")} {t(`location.country.in${locationPascalCase}`)}</h1>
+        {strategicInnovationProgrammes.map((item) => (
         <article>
             <h2>
                 <a href={item.website} target="_blank" rel="noopener noreferrer">
