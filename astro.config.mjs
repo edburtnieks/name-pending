@@ -13,6 +13,7 @@ export default defineConfig({
     sitemap(),
     astroI18next({
       resourcesPath: "./src/locales/",
+      baseLanguage: "en",
       i18next: {
         supportedLngs: ["en", "lv"]
       }
